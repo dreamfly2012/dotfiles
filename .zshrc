@@ -104,7 +104,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export GOPATH="$HOME/go"
-export PATH=~/logo-ls:~/.local/share/nvim/lsp_servers/gopls:~/.local/share/nvim/lsp_servers/clangd/clangd/bin:~/.nvs:/usr/lib/bin:/home/dreamfly/sqlite-tools-linux-x86-3380200:~/lua-language-server/bin:~/.local/bin:~/go/bin:~/.npm/bin:$PATH
+export PATH=~/logo-ls:~/.local/share/nvim/lsp_servers/gopls:~/.local/share/nvim/lsp_servers/clangd/clangd/bin:~/.nvs:/usr/lib/bin:/home/dreamfly/sqlite-tools-linux-x86-3380200:~/lua-language-server/bin:~/.local/bin:~/go/bin:~/.npm/bin:~/.phpenv/bin:$PATH
 export NVS_HOME="$HOME/.nvs"
 export DENO_INSTALL="/home/dreamfly/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
@@ -120,3 +120,4 @@ alias tmux="TERM=screen-256color-bce tmux"
 export NVS_HOME="$HOME/.nvs"
 EDITOR=nvim
 [ -s "$NVS_HOME/nvs.sh" ] && . "$NVS_HOME/nvs.sh"
+eval "$(phpenv init -)"
