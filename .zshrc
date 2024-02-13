@@ -9,7 +9,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/dreamfly/.oh-my-zsh"
+export ZSH="/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -88,7 +88,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-export PATH="/home/dreamfly/phpactor/bin:/home/dreamfly/lua-5.4.3/install/bin:/home/dreamfly/go/bin:/home/dreamfly/.npm_packages/bin:/home/dreamfly/.local/bin:$PATH"
+export PATH="~/phpactor/bin:~/lua-5.4.3/install/bin:~/go/bin:~/.npm_packages/bin:~/.local/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -125,7 +125,7 @@ export DISPLAY=$(ip route list default | awk '{print $3}'):0.0
 export LIBGL_ALWAYS_INDIRECT=1
 export HOST_IP="$(ip route |awk '/^default/{print $3}')"
 export PULSE_SERVER="tcp:$HOST_IP"
-export LD_LIBRARY_PATH=/home/dreamfly/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH="~/lib":$LD_LIBRARY_PATH
 export PULSE_SERVER=tcp:$(ip route list default | awk '{print $3}')
 LOCALIP="$(ifconfig| awk 'NR==2{print $2}')"
 
