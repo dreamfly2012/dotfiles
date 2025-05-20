@@ -73,14 +73,14 @@ ZSH_THEME="robbyrussell"
 plugins=(
     git
     fasd
-   # zsh-autosuggestions
+    zsh-autosuggestions
     zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-export PATH="~/phpactor/bin:~/lua-5.4.3/install/bin:~/go/bin:~/.npm_packages/bin:~/.local/bin:$PATH"
+
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -104,7 +104,7 @@ export PATH="~/phpactor/bin:~/lua-5.4.3/install/bin:~/go/bin:~/.npm_packages/bin
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export GOPATH="$HOME/go"
-export PATH=~/logo-ls:~/.local/share/nvim/lsp_servers/gopls:~/.local/share/nvim/lsp_servers/clangd/clangd/bin:~/.nvs:/usr/lib/bin:/home/dreamfly/sqlite-tools-linux-x86-3380200:~/lua-language-server/bin:~/.local/bin:~/go/bin:~/.npm/bin:~/.phpenv/bin:$PATH
+export PATH=$PATH
 export NVS_HOME="$HOME/.nvs"
 export DENO_INSTALL="/home/dreamfly/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
@@ -117,16 +117,3 @@ alias note="cd ~/note"
 alias python=python3
 alias ls=logo-ls
 alias tmux="TERM=screen-256color-bce tmux"
-export NVS_HOME="$HOME/.nvs"
-[ -s "$NVS_HOME/nvs.sh" ] && . "$NVS_HOME/nvs.sh"
-nvs node/17
-export DISPLAY=$(ip route list default | awk '{print $3}'):0.0
-export LIBGL_ALWAYS_INDIRECT=1
-export HOST_IP="$(ip route |awk '/^default/{print $3}')"
-export PULSE_SERVER="tcp:$HOST_IP"
-export LD_LIBRARY_PATH="~/lib":$LD_LIBRARY_PATH
-export PULSE_SERVER=tcp:$(ip route list default | awk '{print $3}')
-LOCALIP="$(ifconfig| awk 'NR==2{print $2}')"
-
-sed -i "61c load-module module-native-protocol-tcp port=4713 auth-ip-acl=$LOCALIP" /mnt/c/pulse/etc/pulse/default.pa
-eval "$(phpenv init -)"
